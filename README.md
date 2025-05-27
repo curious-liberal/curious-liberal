@@ -1,5 +1,5 @@
 # Founders and Coders application project
-This project is for an application to Founders and Coders.
+This project is for an application to Founders and Coders. Please find a link the home page [here](/src/index.html)
 
 # Application requirements
 My plan is to take these concepts and merge them into a singular project
