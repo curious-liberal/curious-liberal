@@ -45,7 +45,7 @@ Codewars can be tough, but it’s a great learning platform to get confident in 
 
 
 ## Deadline
-Submit by 7th August 2025 to join the September cohort.
+Submit by 31st July 2025 to join the September cohort.
 
 # Project plan
 The plan is rather loose and lacking verbosity and context as it's rather straight forward and not something I need to collaborate on.
