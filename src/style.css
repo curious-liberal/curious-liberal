@@ -23,10 +23,15 @@ body {
     align-items: center;
     width: 3em;
     height: 3em;
-    background: black;
+    background: #31733e;
     border: none;
     border-radius: 50%;
     justify-content: center;
+}
+
+.social-btn:hover {
+    scale: 1.1;
+    transition: 0.15s;
 }
 
 
