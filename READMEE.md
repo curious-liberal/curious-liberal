@@ -54,12 +54,15 @@ The plan is rather loose and lacking verbosity and context as it's rather straig
 Responsive biographical website featuring profile pictures, links to social media, bio section and pages widgets which lead to other pages detailing various hobbies e.g. climbing, tech, bushcraft, magic, art, music, cooking. Each widget must include a featured image, title and description or truncated contents if a description is missing. Hobby pages should be created in JSON format and rendered into HTML using JavaScript; this allows us to easily turn it into a Markdown editor like AnyType, Logeq, Notion etc later on.
 
 # Tasklist
-1. Design UI in Penpot
-2. Build static home page with profile pic, bio, links and widgets
-3. Create widget functionality
-4. Add light theme, dark theme button
-5. Cause 404 page to become gamified music player which transforms player controls into pong-like paddle
-6. Setup Node server (don't use express as no external libraries) with custom 404 pages
-7. Deploy on servers
-8. Extension (new branch) - use my profile as demo profile which is stored in local storage. Allow other users to create their own profile, edit profile picture, bio, links, add new widgets and have access to markdown editor.
-9. Extra extension that'll never happen because I'm too busy (new branch) - setup user account creation, cloud service and configure with CloudFlare API to allow users to buy domain, login publish site etc.
+[x] Design UI
+[x]. Build static home page with profile pic, bio, links and widgets
+[x] Create widget functionality
+[ ] Create pages for each widget
+[ ] Add light theme, dark theme button
+[ ] Cause 404 page to become gamified music player which transforms player controls into pong-like paddle
+[ ] Setup Node server (don't use express as no external libraries) with custom 404 pages
+[ ] Deploy on servers
+
+## Extension
+[ ] Create new branch - use current profile as demo profile which is stored in local storage. Allow other users to create their own profile, edit profile picture, bio, links, add new widgets and have access to markdown editor.
+[ ] Extra extension that'll never happen because I'm too busy (new branch) - setup user account creation, cloud service and configure with CloudFlare API to allow users to buy domain, login publish site etc.
