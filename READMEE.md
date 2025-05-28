@@ -55,7 +55,7 @@ Responsive biographical website featuring profile pictures, links to social medi
 
 # Tasklist
 - [x] Design UI
-- [x]. Build static home page with profile pic, bio, links and widgets
+- [x] Build static home page with profile pic, bio, links and widgets
 - [x] Create widget functionality
 - [ ] Create pages for each widget
 - [ ] Add light theme, dark theme button
