@@ -10,6 +10,11 @@ body {
     margin: 0 8em;
 }
 
+/* Hide .widget-description */
+.widget-description-original {
+    display: none;
+}
+
 #name, #occupation, .links {
     margin: 0.75em 0;
 }
