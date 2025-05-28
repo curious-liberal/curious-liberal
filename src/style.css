@@ -37,10 +37,72 @@ body {
     vertical-align: middle;
 }
 
-/* Responsive profile picture */
+.widget-wrapper {
+    margin: 3em 0 3em 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5em;
+}
+
+.widget {
+    cursor: pointer;
+    background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sportscoverdirect.com%2Fwp-content%2Fuploads%2F2021%2F10%2FRock-Climbing-Journey-C.jpg&f=1&nofb=1&ipt=c83ad7d55e3286bbce6035ccd276840fc887a026a6d230ced16e9de32727cfb4");
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: flex-end;
+    aspect-ratio: 1/1.15;
+}
+
+.widget-content {
+    background: white;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    border: 1px solid black;
+    border-radius: 0 0 20px 20px;
+    border-top: none;
+    /* Make sure they're all the same height */
+    height: 30%;
+    overflow: hidden;
+}
+
+/* Responsive stuff */
+@media only screen and (max-width: 2500px) {
+    .widget {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .profile-picture {
+        width: 18%;
+    }
+
+    .widget {
+        width: 25%;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .profile-picture {
         width: 25%;
+    }
+
+    .bio {
+        margin: 0 1em;
+    }
+
+    .widget {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .widget {
+        width: 70%;
     }
 }
 
