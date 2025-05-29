@@ -1,27 +1,31 @@
-var navTo = function (page) {
+const navTo = (page: string): void => {
     // Navigate to page argument
     document.location.href = page;
-};
-var truncate = function () {
+}
+
+const truncate = (): void => {
     /* Truncate widget-description content by calculating width and height
     of widget-content box and applying some random maths I've tinkered with
     to give a list of characters to slice.
     */
-    var windowSize = window.outerWidth;
+    const windowSize: number = window.outerWidth;
+
     // Original descriptions from hidden paragraphs
-    var descriptions = document.querySelectorAll(".widget-description-original");
+    let descriptions: NodeListOf<HTMLParagraphElement> = document.querySelectorAll(".widget-description-original");
     // Newly created descriptions
-    var truncatedDescriptions = document.querySelectorAll(".widget-description");
+    let truncatedDescriptions: NodeListOf<HTMLParagraphElement> = document.querySelectorAll(".widget-description");
+
     // Loop through each description and truncate appropriately
-    for (var i = 0; i < descriptions.length; i++) {
-        var content = descriptions[i].innerText;
+    for (let i = 0; i < descriptions.length; i++) {
+        let content: string = (descriptions[i] as HTMLParagraphElement).innerText;
         // Truncate length is caluclated based on width and height of widget-content box
-        var truncateLength = (descriptions[i].parentElement.clientWidth / 5) * descriptions[i].parentElement.clientHeight / 180;
-        content = "".concat(content.slice(0, truncateLength), "...");
-        truncatedDescriptions[i].innerText = content;
+        let truncateLength: number = ((descriptions[i] as HTMLParagraphElement).parentElement.clientWidth / 5) * (descriptions[i] as HTMLParagraphElement).parentElement.clientHeight / 180;
+        content = `${(content as string).slice(0, truncateLength)}...`;
+        (truncatedDescriptions[i] as HTMLParagraphElement).innerText = content;
     }
-};
-var addWidgetDescriptions = function () {
+}
+
+const addWidgetDescriptions = (): void => {
     /*  Hide original widget descriptions and add "widget-description-original" class
     to them. This makes each description identifiable. We then insert a visible paragraph
     below which has the class "widget-description". JavaScript later on uses the original
@@ -39,22 +43,27 @@ var addWidgetDescriptions = function () {
     Of course Vue, Svelte or any front-end framework could solve this in a much more efficient
     manner, right within the HTML itself.
     */
+
     // Original widget descriptions
-    var widgetDescriptions = document.querySelectorAll(".widget-content > p");
-    var widgetContents = document.querySelectorAll(".widget-content");
-    for (var i = 0; i < widgetContents.length; i++) {
+    const widgetDescriptions: NodeListOf<HTMLParagraphElement> = document.querySelectorAll(".widget-content > p");
+
+    let widgetContents: NodeListOf<HTMLDivElement> = document.querySelectorAll(".widget-content");
+    for (let i = 0; i < widgetContents.length; i++) {
         // Add widget-description-original class
         widgetDescriptions[i].classList.add("widget-description-original");
         // Add displau: none; style
         widgetDescriptions[i].style.display = "none";
+
         // Create new visible paragraph below original
-        var truncatedParagraph = document.createElement("p");
+        const truncatedParagraph: HTMLParagraphElement = document.createElement("p");
         // Add widget-description class so we can target it later
         truncatedParagraph.classList.add("widget-description");
         widgetContents[i].appendChild(truncatedParagraph);
     }
+
     // Truncate text for first time as this function is ran on DOMContentLoaded
     truncate();
-};
+}
+
 window.addEventListener("DOMContentLoaded", addWidgetDescriptions);
 window.addEventListener("resize", truncate);
