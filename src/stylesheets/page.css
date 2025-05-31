@@ -37,3 +37,7 @@ a {
 .featured-text {
     padding: 1.8em 1.8em 1.5em 1.5em;
 }
+
+img, video {
+    border-radius: 30px;
+}
