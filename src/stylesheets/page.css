@@ -40,4 +40,17 @@ a {
 
 img, video {
     border-radius: 30px;
+    width: 25%;
+}
+
+@media only screen and (max-width: 950px) {
+    img, video {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    img, video {
+        width: 80%;
+    }
 }
