@@ -79,6 +79,11 @@ body {
     aspect-ratio: 1/1.15;
 }
 
+.widget:hover {
+    scale: 1.1;
+    transition: 0.2s;
+}
+
 .widget-content {
     background: white;
     padding: 0.5em 1em;
